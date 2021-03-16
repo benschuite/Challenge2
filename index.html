@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="utf-8">
+		<title>Klok</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="scripts/script.js" defer></script>
+	</head>
+  	<body>
+
+      <section id="dag">
+        <article class="flex-container">
+          <article class="flex-item tijd">
+            <div id="klok" class="klok" onload="showTime()"></div>
+          </article>  
+
+           <article class="flex-item datum">
+              <div id="datum" class="datum" onload="showTime()"></div>
+           </article>
+       </article>
+
+      <article id="animaties">
+          <img src="images/wolken.png" id="wolk"/>
+          <img src="images/ster.png"  id="ster"/>
+      </article>
+      
+    </section>
+      
+
+  	</body>
+</html>

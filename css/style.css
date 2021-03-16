@@ -1,0 +1,171 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+	padding: 0;
+	margin: 0;
+  	font-family: Verdana, sans-serif ;
+  	font-weight: 400;
+  	color: white;
+  	width: 100vw;
+  	height: 100vh;
+}
+
+
+
+#dag {
+	background-image: url(../images/ochtend-mobile.jpg);
+  	background-repeat: no-repeat;
+  	background-size: cover;
+	min-height: 100vh;
+	min-width: 100vw;
+	padding: 0;
+	margin: 0;
+ 
+}
+
+#dag.middag {
+	position: absolute;
+	background-image: url(../images/middag.jpg); 	
+}
+
+
+
+#wolk{
+	width: 80%;
+	position: absolute;
+	left: 10px;
+	animation: 1000ms pulsate infinite alternate ease-in-out;
+}
+
+@keyframes pulsate {
+  0% { 
+  	top: 10px; 
+  }
+  100% { 
+  	top: 45px; 
+  }
+}
+
+#dag.avond {
+	position: absolute;
+	background-image: url(../images/avond-mobile.jpg); 	
+}
+
+#ster{
+	width: 130px;
+	position: absolute;
+	margin-left: -200px;
+	margin-top: -100px;
+}
+
+#ster.vallendeSter{
+	position: absolute;
+	transition-duration: 4s;
+	margin-left: 200px;
+	margin-top: 200px;
+}
+
+#dag.nacht {
+	position: absolute;
+	background-image: url(../images/nacht-mobile.jpg); 	
+	background-position: center; 
+
+}
+
+
+/* flexbox layout */
+.flex-container{
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+ 
+}
+
+.flex-item{
+  	width: 100%; 
+    font-size: 60px;
+    letter-spacing: 7px; 
+    text-align: center;
+}
+
+.flex-item #datum{
+  	 font-size: 40px;
+  	 letter-spacing: 2px; 
+  	 text-align: center;
+
+}
+
+
+/* breakpoint 1 */
+@media screen and (min-width: 768px) {
+
+	 #wolk{
+	  	width: 60%;  	
+	 }
+
+	 #ster{
+		width: 170px;
+		margin-left: -200px;
+		margin-top: -100px;
+	 }
+
+	#ster.vallendeSter{
+		position: absolute;
+		transition-duration: 4s;
+		margin-left: 500px;
+		margin-top: 200px;
+	}
+ 
+}
+
+/* breakpoint 2 */
+@media screen and (min-width: 1023px) {
+
+	#dag {
+		background-image: url(../images/ochtend.jpg);
+	}
+	 
+	#dag.avond {
+		background-image: url(../images/avond.jpg); 	
+	}
+
+	#dag.nacht {
+		background-image: url(../images/nacht.jpg); 	
+
+	}
+
+	#wolk{
+	  	width: 40%; 
+	}
+	 
+	 #ster{
+		 width: 25%; 
+	}
+
+	#ster.vallendeSter{
+		margin-left: 60%;
+		margin-top: 100px;
+	}
+  
+}
+
+/* breakpoint 3 */
+@media screen and (min-width: 1280px) {
+
+   #ster{
+		 width: 20%; 
+	}
+
+
+
+
+}
+
+
